@@ -23,6 +23,10 @@ conv_json = json.loads(json_data)
 
 if not path.exists(SAVE_PATH + title):
     mkdir(SAVE_PATH + title)
+else:
+    if input('已存在，继续？(y)').lower() != 'y':
+        print('已停止')
+        exit(0)
 
 print(title + '\n' + json_data + '\n')
 print(str(len(conv_json['content']['images']['gallery'])) + ' 个项目')
