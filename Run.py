@@ -4,7 +4,7 @@ import json
 from os import path, mkdir
 from time import sleep
 
-URL = 'https://www.caranddriver.com/photos/g25683539/2019-audi-a6-3-0t-by-the-numbers-gallery/?slide=14'
+URL = 'https://www.caranddriver.com/photos/g26533372/2019-audi-a8-by-the-numbers-gallery/?slide=1'
 HEADERS = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) '
                   'Chrome/83.0.4103.116 Safari/537.36',
@@ -25,7 +25,7 @@ if not path.exists(SAVE_PATH + title):
     mkdir(SAVE_PATH + title)
 
 print(title + '\n' + json_data + '\n')
-print(str(len(conv_json['content']['images']['gallery'])) + '张')
+print(str(len(conv_json['content']['images']['gallery'])) + ' 个项目')
 
 for image in conv_json['content']['images']['gallery']:
     download_url.append(str(image['url']))
