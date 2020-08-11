@@ -25,11 +25,11 @@ if not path.exists(SAVE_PATH + title):
     mkdir(SAVE_PATH + title)
 else:
     if input('已存在，继续？(y)').lower() != 'y':
-        print('已停止')
+        print('结束')
         exit(0)
 
 print(title + '\n' + json_data + '\n')
-print(str(len(conv_json['content']['images']['gallery'])) + ' 个项目')
+print(str(len(conv_json['content']['images']['gallery']) / 2) + ' 个项目')
 
 for image in conv_json['content']['images']['gallery']:
     download_url.append(str(image['url']))
@@ -38,6 +38,9 @@ for image in conv_json['content']['images']['gallery']:
             str(image['url']).replace('https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/', ''))
     elif 'www.caranddriver.com' in str(image['url']):
         download_name.append(str(image['url']).replace('https://www.caranddriver.com/photos/g25683539/', ''))
+
+download_url = list(set(download_url))
+download_name = list(set(download_name))
 
 for name, dld_url in zip(download_name, download_url):
     sleep(3)
