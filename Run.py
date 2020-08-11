@@ -4,7 +4,7 @@ import json
 from os import path, mkdir
 from time import sleep
 
-URL = 'https://www.caranddriver.com/photos/g26533372/2019-audi-a8-by-the-numbers-gallery/?slide=1'
+URL = 'https://www.caranddriver.com/photos/g33384233/2022-audi-a3-sedan-specs-details-gallery/'
 HEADERS = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) '
                   'Chrome/83.0.4103.116 Safari/537.36',
@@ -21,6 +21,8 @@ json_data = e.xpath('//*[@id="data-layer"]/text()')[0]
 title = str(e.xpath('//title/text()')[0]).strip()
 conv_json = json.loads(json_data)
 
+if not path.exists(SAVE_PATH):
+    mkdir(SAVE_PATH)
 if not path.exists(SAVE_PATH + title):
     mkdir(SAVE_PATH + title)
 else:
