@@ -58,6 +58,7 @@ for name, dld_url in zip(download_name, download_url):
         image_save.flush()
         image_save.close()
     print(name + ' √')
+print('完成')
 
 # 2020年8月10日 - 创建
 # 2020年10月25日 - 修改
