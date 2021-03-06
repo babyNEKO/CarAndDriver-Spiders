@@ -29,6 +29,7 @@ if not path.exists(SAVE_PATH):
 if not path.exists(SAVE_PATH + title):
     mkdir(SAVE_PATH + title)
 else:
+    os.system('tree' + SAVE_PATH)
     if input('已存在，继续？(y)').lower() != 'y':
         print('结束')
         exit(0)
@@ -45,8 +46,6 @@ for image in conv_json['content']['images']['gallery']:
         )
     # elif 'www.caranddriver.com' in str(image['url']):
     #     download_name.append(str(image['url']).replace('https://www.caranddriver.com/photos/g25683539/', ''))
-
-os.system('tree' + SAVE_PATH)
 
 download_url = list(set(download_url))
 download_name = list(set(download_name))
