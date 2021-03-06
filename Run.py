@@ -29,7 +29,7 @@ if not path.exists(SAVE_PATH):
 if not path.exists(SAVE_PATH + title):
     mkdir(SAVE_PATH + title)
 else:
-    system('chcp 65001')
+    # system('chcp 65001')  # 如果终端不能正常输出或者是输出有问题，再把这个打开。否则请保持默认。
     system('tree .\img')
     if input('已存在，继续？(y)').lower() != 'y':
         print('\t结束')
