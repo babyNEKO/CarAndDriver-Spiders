@@ -1,9 +1,12 @@
 # CarAndDriver-Spiders | Python 3
-<p>图片爬虫 https://www.caranddriver.com/  →  你需要搜索到车型（准确的）  爬虫工作目录示例：https://www.caranddriver.com/photos/g26533372/2019-audi-a8-by-the-numbers-gallery/</p>
-<p>快速启动：可直接使用g编号 快速启动（g26533372、gxxxxxxxxx）此功能仅限v2或更新的版本</p>
-</br>
-<ul>
-  <li>v2 - 2021-7-22</li>
-</ul>
+<p>Car And Driver 图片爬虫</p>
+<p>使用说明：</br>先浏览你需要爬取的车辆，复制URL或g编号</p>
+<p>程序工作URL和g编号示例：</br>
+	<ul>
+		<li>https://www.caranddriver.com/photos/g26358386/2019-ram-2500-3500-first-drive-gallery/</li>
+		<li>g26358386</li>
+	</ul>
+</p>
+<p>提示信息：1.后期不会增加并发功爬取功能 2.v1版本以后会删除（时间待定）</p>
 <b>仅供学习交流使用。</b>
 <p>bug@foxmail.com</p>
