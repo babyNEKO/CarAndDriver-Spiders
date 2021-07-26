@@ -50,7 +50,7 @@ class CarAndDriverSpider:
 
         print('\n[bold red]----------Json Debug----------[/bold red]')
         print(CarAndDriverSpider.img_list2, len(CarAndDriverSpider.img_list2))
-        print('[bold red]----------End Json Debug----------[/bold red]')
+        print('[bold red]----------End Json Debug----------[/bold red]\n')
 
         for i in CarAndDriverSpider.img_list2:
             filename = ''
